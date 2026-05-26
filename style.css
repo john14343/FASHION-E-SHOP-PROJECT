@@ -1,0 +1,2033 @@
+/* GENERAL  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+figure {
+    display: flex;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+
+
+/* ΕΠΙΚΕΦΑΛΙΔΑ / HEADER */
+
+header {
+    padding: 24px 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(255 255 255 / 90%);
+}
+
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+
+.mobile__links--container {
+    display: none;
+}
+
+
+.mobile__nav--links {
+    width: 100%;
+    text-align: center;
+}
+
+
+.mobile__nav--links li {
+    padding: 20px 30px;
+    
+}
+
+
+.mobile__nav--links li:hover {
+    background-color: blue;
+}
+
+
+.mobile__nav--link {
+    color: white;
+}
+
+
+.open-sidebar-button,
+.close-sidebar-button,
+#sidebar-active {
+    display:none;
+    cursor: pointer;
+}
+
+
+.Navigation__Logo {
+    width: 128px;
+}
+
+
+.Navigation__Links {
+    display: flex;
+}
+
+
+.Navigation__Link {
+    margin-left: 32px;
+    color: #1E1E1F;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+    display: inline-block;
+    position: relative;
+    padding-block: 6px;
+}
+
+
+.Navigation__Link::after {
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    transition: all 300ms ease;
+}
+
+
+.Navigation__Link:hover::after {
+    width: 100%;
+}
+
+
+@keyframes pulse {
+  0% { 
+    transform: scale(1); 
+}
+  
+  50% { 
+    transform: scale(1.07); 
+}
+  
+   100% { 
+    transform: scale(1); 
+}
+}
+
+
+.Active {
+    color: #dd0404;
+    
+}
+
+
+.Navigation__Link:hover {
+    animation: pulse 1s infinite ease-in-out;
+    color: #dd0404;
+}
+
+
+i {
+    margin-left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+
+i:hover {
+    color: #ff4545;
+    transform: rotate(360deg);
+}
+
+
+/* HERO  */
+
+ #hero { 
+    height: calc(100vh - 100px);
+    background-image: url('./Assets/slider1.webp');
+    background-size: cover;
+    background-position: center center;
+    padding: 144px 0 0 96px;
+} 
+
+
+.Hero__Description {
+    opacity: 0;
+    animation: fadeInFromLeft 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes fadeInFromLeft {
+    0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.Hero__Sub--Title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #dd0404;
+}
+
+
+.Hero__Title {
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+
+.Hero__Paragraph,
+.Spring__Collection--Paragraph {
+    margin: 28px 0;
+    max-width: 450px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+
+.Hero__Paragraph a,
+.Spring__Collection--Paragraph a {
+    background-image: linear-gradient(to right, red, blue);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: all 300ms ease;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+
+.Hero__Paragraph a:hover,
+.Spring__Collection--Paragraph a:hover {
+    background-size: 100% 3px;
+}
+
+
+.Color {
+    font-weight: bold;
+    color: #232323;
+    
+}
+
+
+.Hero__Button,
+.Spring__Collection--Button {
+    padding: 15px 35px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    background-color: #dd0404;
+    color: white;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+
+.Hero__Button:hover,
+.Spring__Collection--Button:hover {
+    background-color: black;
+}
+
+
+/* COLLECTIONS / ΣΥΛΛΟΓΕΣ ΡΟΥΧΩΝ */
+
+#Collections {
+    padding-top: 72px;
+    margin: 0 auto;
+    max-width: 1450px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Collection {
+    animation: pop-Up linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+
+
+@keyframes pop-Up {
+  0% {
+        opacity: 0;
+        transform: scale(0.6);
+  }
+  
+   100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.Collection__Figure--2 {
+    position: absolute;
+    opacity: 0;
+    transition: all 300ms ease;
+    top: 0;
+}
+
+
+.Collection__Container {
+    padding: 37px 87px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255 255 255 / 90%);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+
+.Collection__Title {
+    font-size: 35px;
+    font-weight: 600;
+    max-width: 180px;
+    margin-bottom: 25px;
+    line-height: 36px;
+    text-align: center;
+    color: #1E1E1F;
+}
+
+
+.Collection__Button {
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.05px;
+    border: 1px solid #292929;
+    border-radius: 30px;
+}
+
+
+.Collection__Button:hover {
+    background-color:#232323;
+    color: white;
+}
+
+
+.Collection:hover .Collection__Figure--2,
+.Collection:hover .Collection__Container {
+    opacity: 1;
+}
+
+ 
+/* CATEGORIES / ΚΑΤΗΓΟΡΙΕΣ */
+
+#Categories {
+    padding: 72px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.Categories__Title,
+.Testimonials__Title,
+.Products__Title,
+.Footer__Title {
+    position: relative;
+    padding-bottom: 12px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Categories__Title::after,
+.Testimonials__Title::after,
+.Products__Title::after,
+.Footer__Title::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    bottom: 0;
+    background-color: #ff4545;
+}
+
+
+.Category__Items {
+    display: flex;
+    margin-top: 24px;
+    gap: 32px;
+}
+
+
+.Item {
+  animation: pop-Up linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% entry 50%;
+}
+
+
+.Item__Picture--Wrapper {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.Item__Picture {
+    transition: all 300ms ease;
+}
+
+
+.Item__Picture--Wrapper:hover .Item__Picture {
+    transform: scale(1.1);
+}
+
+
+.Product__Name {
+    margin: 8px 0 4px;
+}
+
+
+.Product {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1E1E1F;
+    text-transform: uppercase;
+}
+
+
+.Product__Collection {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.Products__Number,
+.Collection {
+    font-size: 15px;
+    color: #232323;
+}
+
+
+.Product:hover {
+    color: #ff4545;
+}
+
+
+.Collection:hover {
+    color: #ff4545;
+}
+
+
+/* TESTIMONIALS / ΣΧΟΛΙΑ ΠΕΛΑΤΩΝ */
+
+#Testimonials {
+    background-color: #f7f7f7;
+    padding: 72px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.Testimonials__Picture--Wrapper {
+    cursor: pointer;
+    max-width: 90px;
+    margin: 32px 0;
+}
+
+
+.Testimonials__Picture--Wrapper:hover .Testimonials__Picture {
+    transform: scale(1.1);
+}
+
+
+.Testimonials__Paragraph {
+    font-size: 18px;
+    max-width: 800px;
+    margin-bottom: 32px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+.Testimonials__Name {
+    font-size: 16px;
+    color: #dd0404;
+}
+
+
+.Testimonials__Text {
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 4px;
+    color: #232323;
+}
+
+
+.Testimonials__Name,
+.Testimonials__Text {
+    text-transform: uppercase;
+}
+
+
+/* Products / ΠΡΟΙΟΝΤΑ  */
+
+#Products {
+    padding: 72px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.Products__Sub--Title {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 32px 0;
+    border-bottom: 1px solid #aaa;
+    letter-spacing: 1px;
+    color: #232323;
+    transition: all 300ms ease;
+    text-transform: uppercase;
+}
+
+
+.Products__Sub--Title:hover {
+    border-color: #ff4545;
+    color: #ff4545;
+}
+
+
+.Products__List--Items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+
+.Products__List--Item {
+  animation: pop-Up linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% entry 50%;
+}
+
+
+.Product__Image--Wrapper {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    max-width: 260px;
+}
+
+
+.Product__Image {
+   transition: all 300ms ease;
+}
+
+
+.Product__Image--Wrapper:hover .Product__Image {
+    transform: scale(1.1);
+}
+
+
+.Label__Sale {
+    padding: 0 7px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
+    background-color: #dd0404;
+    color: white;
+}
+
+
+.Product__Description {
+    max-width: 260px;
+    margin: 8px 0;
+}
+
+
+.Product__Price {
+    font-weight: bold;
+}
+
+
+.Price__Normal {
+    padding-right: 10px;
+    text-decoration: line-through;
+    color: black;
+    font-weight: 400;
+}
+
+
+/* SEASON ARRIVALS / ΝΕΕΣ ΑΦΙΞΕΙΣ */
+
+
+#Season__Arrivals {
+    display: flex;
+}
+
+
+.Season__Arrivals--Wrapper {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: calc(100% / 2);
+}
+
+
+.Season__Arrivals--Image {
+    transition: all 300ms ease;
+}
+
+
+.Season__Arrivals--Wrapper:hover .Season__Arrivals--Image {
+    transform: scale(1.1);
+}
+
+
+.Season__Arrivals--Text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: rgb(0 0 0 / 60%);
+    text-align: center;
+    padding: 20px 0;
+    transform: translate(-50%, -50%);
+}
+
+
+.Season__Arrivals--Title {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    max-width: 300px;
+    color: white;
+}
+
+
+.Season__Arrivals--Button {
+    padding: 12px 32px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: black;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+
+.Season__Arrivals--Button:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+
+/* Spring-Collection / ΑΝΟΙΞΙΑΤΙΚΗ ΣΥΛΛΟΓΗ */
+
+#Spring__Collection {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.Spring__Collection__Image--Wrapper {
+    overflow: hidden;
+}
+
+
+.Spring__Collection--Image{
+    transition: all 300ms ease;
+}
+
+
+#Spring__Collection:hover .Spring__Collection--Image {
+    transform: scale(1.1);
+}
+
+
+.Spring__Collection--Description {
+    position: absolute;
+    top: 35%;
+    right: 10%;
+}
+
+
+.Spring__Collection__Sub--Title {
+    font-size: 25px;
+    font-weight: 400;
+    color: #dd0404;
+}
+
+
+.Spring__Collection--Title {
+    font-size: 58px;
+    color: #292929;
+    text-transform: uppercase;
+}
+
+
+/* BRANDING / EΠΩΝΥΜΙΑ */
+
+#Branding {
+    padding: 72px 0;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.Branding__Group {
+    padding-right: 64px;
+    display: flex;
+    gap: 64px; 
+    animation: Sliding 15s infinite linear;
+}
+    
+
+#Branding:hover .Branding__Group{
+    animation-play-state: paused;
+}
+
+
+@keyframes Sliding {
+    0% {
+      transform: translateX(0);
+    }
+    
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+.Branding__Image--Wrapper {
+    height: 55px;
+    width: 150px;
+}
+
+.Branding__Image {
+    transition: all 300ms;
+}
+
+
+.Branding__Image--Wrapper:hover .Branding__Image {
+    transform: scale(1.1);
+}
+
+
+/* Footer  */
+
+footer {
+    background-color: #292929;
+}
+
+
+.Footer__Top {
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.Footer__Title {
+    color: white;
+}
+
+
+.Footer__Sub--Title {
+    margin: 32px 0;
+    color: #999;
+}
+
+
+.Form input {
+    padding-left: 15px;
+    font-size: 16px;
+    width: 450px;
+    height: 55px;
+    margin-right: 16px;
+    border: 1px solid white;
+}
+    
+    
+input:focus{
+    outline: none;
+}
+
+
+.Form__Button {
+    padding: 16px 24px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    background-color: #dd0404;
+    color: white;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+    letter-spacing: 1px;
+}
+
+
+.Form__Button:hover {
+    color: #232323;
+}
+
+
+.Footer__Bottom {
+    padding: 30px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(255 255 255 / 7%);
+}
+
+
+.Footer__Logo--Copyrights {
+    display: flex;
+    align-items: center;
+}
+
+
+.Footer__Logo {
+    width: 110px;
+}
+
+
+.Footer__Copyright {
+    font-size: 15px;
+    margin-left: 32px;
+    opacity: 0.5;
+    color: white;
+}
+
+
+.Footer__Payment--Logo {
+    width: 354px;
+}
+
+
+/* * Responsiveness  */ 
+
+@media ( width <= 1286px ) {
+    header {
+        padding: 24px 32px;
+    }
+
+    .Navigation__Logo {
+        width: 120px;
+    }
+
+    .Navigation__Link {
+        font-size: 15px;
+    }
+
+    #hero {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Hero__Description {
+        text-align: center;
+        padding: 20px 0;
+        background-color: rgb(255 255 255 / 50%);
+    }
+
+    .Hero__Sub--Title,
+    .Spring__Collection__Sub--Title {
+        font-size: 17px;
+    }
+
+    .Hero__Title,
+    .Spring__Collection--Title {
+        font-size: 46px;
+    }
+
+    .Hero__Paragraph a,
+    .Spring__Collection--Paragraph a {
+        font-size: 16px;
+    }
+
+    .Hero__Button,
+    .Spring__Collection--Button {
+        font-size: 13px;
+    }
+
+    #Collections {
+        padding: 72px 16px 0;
+    }
+
+    .Collection__Container {
+        padding: 37px 45px;
+    }
+
+    .Collection__Title {
+        font-size: 30px;
+    }
+
+    .Collection__Button {
+        font-size: 14px;
+    }
+
+    #Categories {
+        padding: 72px 16px;
+    }
+
+    .Categories__Title,
+    .Testimonials__Title,
+    .Products__Title,
+    .Footer__Title {
+        font-size: 27px;
+    }
+
+    .Product,
+    .Testimonials__Paragraph {
+        font-size: 17px;
+    }
+
+    .Products__Number,
+    .Collection {
+        font-size: 14px;
+    }
+
+     #Products {
+        padding: 72px 16px;
+     }
+
+     .Products__List--Item {
+        width: 30%;
+     }
+
+     .Product__Image--Wrapper {
+        max-width: 100%;
+     }
+
+     .Product__Description {
+        max-width: 100%;
+        height: 40px;
+        font-size: 16px;
+     }
+
+     .Product__Price,
+     .Price__Normal {
+        font-size: 15px;
+     }
+
+    .Season__Arrivals--Title {
+        font-size: 35px;
+        max-width: 250px;
+     }
+
+     .Season__Arrivals--Button {
+        font-size: 13px;
+        color: black;
+        background-color: white;
+     }
+
+    .Spring__Collection--Description {
+        text-align: center;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .Branding__Image--Wrapper {
+        width: 140px;
+        height: 45px;
+    }
+
+    .Branding__Image {
+        object-fit: contain;
+    }
+
+    .Form__Button {
+        font-size: 12px;
+    }
+        
+    
+    
+}
+
+@media  ( 870px <= width <= 992px) {
+    header {
+        padding: 24px 20px;
+    }
+
+    .Navigation__Logo {
+        width: 110px;
+    }
+
+    .Navigation__Link {
+        margin-left: 24px;
+        font-size: 13.5px;
+    }
+
+    i {
+        margin-left: 10px;
+    }
+
+     #hero {
+        height: 520px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .Hero__Sub--Title,
+    .Spring__Collection__Sub--Title {
+        font-size: 17px;
+    }
+
+    .Hero__Title,
+    .Spring__Collection--Title {
+        font-size: 44px;
+    }
+
+    .Hero__Paragraph,
+    .Spring__Collection--Paragraph {
+        max-width: 400px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .Hero__Paragraph a,
+    .Spring__Collection--Paragraph a {
+        font-size: 15px;
+    }
+
+
+    .Hero__Button  {
+        font-size: 12px;
+    }
+
+    .Hero__Button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #Collections {
+        padding: 48px 16px 0;
+    }
+
+    .Collection__Container {
+        padding: 18px 24px;
+    }
+
+    .Collection__Title {
+        font-size: 24px;
+    }
+
+    .Collection__Button {
+        font-size: 12px;
+    }
+
+    #Categories {
+        padding-top: 48px;
+    }
+
+    .Categories__Title,
+    .Testimonials__Title,
+    .Products__Title,
+    .Footer__Title {
+        font-size: 26px;
+    }
+
+    .Category__Items,
+    .Products__List--Items {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 32px;
+    }
+
+    .Item {
+        width: 45%;
+    }
+
+    .Product {
+        font-size: 16.5px;
+    }
+
+    #Testimonials {
+        padding: 48px 16px;
+    }
+
+    .Testimonials__Paragraph,
+    .Testimonials__Name {
+        font-size: 15px;
+    }
+
+    #Products {
+        padding-top: 48px;
+    }
+
+    .Products__Sub--Title {
+        font-size: 12px;
+    }
+
+    .Products__List--Item {
+        width: 45%;
+    }
+
+    .Product__Image--Wrapper {
+        max-width: 100%;
+    }
+
+    .Product__Description {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .Product__Price,
+    .Price__Normal {
+        font-size: 14px;
+    }
+
+    .Season__Arrivals--Title {
+        font-size: 28px;
+        max-width: 200px;
+    }
+
+    .Season__Arrivals--Button {
+        font-size: 11px;
+    }
+
+    .Spring__Collection--Button {
+        font-size: 12px;
+    }
+
+    .Branding__Image--Wrapper {
+        height: 50px;
+        width: 120px;
+    }
+
+    .Footer__Sub--Title {
+        font-size: 15px;
+    }
+
+    .Form input {
+        width: 400px;
+        font-size: 15px;
+    }
+
+    .Form__Button {
+        font-size: 11px;
+        padding: 18px 24px;
+    }
+
+    .Footer__Bottom {
+        flex-direction: column;
+    }
+
+    .Footer__Logo--Copyrights {
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
+    .Footer__Copyright {
+        margin: 4px 0 0;
+        font-size: 14px;
+    }
+
+    .Footer__Payment--Logo {
+        width: 320px;
+    }
+}
+
+
+@media  (width < 870px) {
+    header {
+        padding: 24px 20px;
+    }
+
+    svg {
+        width: 26px;
+        height: 26px;
+    }   
+
+    .mobile__links--container {
+        left: -100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transition: 1s ease-out;
+        z-index: 10;
+    }
+
+    .mobile__nav--link {
+        font-size: 15px;
+    }
+
+    .open-sidebar-button {
+        display: block;
+        padding: 10px;
+    }
+
+    .close-sidebar-button {
+        display: block;
+        padding: 10px;
+        fill: white;
+    }
+
+    #sidebar-active:checked ~ .mobile__links--container {
+        left: 0;
+    }
+
+    #sidebar-active:checked ~ .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 80%);
+        z-index: 9;
+    }
+
+    .Navigation__Logo {
+        width: 110px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    i {
+        margin-left: 10px;
+    }
+
+     #hero {
+        height: 520px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .Hero__Sub--Title,
+    .Spring__Collection__Sub--Title {
+        font-size: 17px;
+    }
+
+    .Hero__Title,
+    .Spring__Collection--Title {
+        font-size: 44px;
+    }
+
+    .Hero__Paragraph,
+    .Spring__Collection--Paragraph {
+        max-width: 400px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .Hero__Paragraph a,
+    .Spring__Collection--Paragraph a {
+        font-size: 15px;
+    }
+
+    .Hero__Button  {
+        font-size: 12px;
+    }
+
+    .Hero__Button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #Collections {
+        padding: 48px 16px 0;
+    }
+
+    .Collection__Container {
+        padding: 18px 24px;
+    }
+
+    .Collection__Title {
+        font-size: 24px;
+    }
+
+    .Collection__Button {
+        font-size: 12px;
+    }
+
+    #Categories {
+        padding-top: 48px;
+    }
+
+    .Categories__Title,
+    .Testimonials__Title,
+    .Products__Title,
+    .Footer__Title {
+        font-size: 26px;
+    }
+
+    .Category__Items,
+    .Products__List--Items {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 32px;
+    }
+
+    .Item {
+        width: 45%;
+    }
+
+    .Product {
+        font-size: 16.5px;
+    }
+
+    #Testimonials {
+        padding: 48px 16px;
+    }
+
+    .Testimonials__Paragraph,
+    .Testimonials__Name {
+        font-size: 15px;
+    }
+
+    #Products {
+        padding-top: 48px;
+    }
+
+    .Products__Sub--Title {
+        font-size: 12px;
+    }
+
+    .Products__List--Item {
+        width: 45%;
+    }
+
+    .Product__Image--Wrapper {
+        max-width: 100%;
+    }
+
+    .Product__Description {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .Product__Price,
+    .Price__Normal {
+        font-size: 14px;
+    }
+
+    .Season__Arrivals--Title {
+        font-size: 28px;
+        max-width: 200px;
+    }
+
+    .Season__Arrivals--Button {
+        font-size: 11px;
+    }
+
+    .Spring__Collection--Button {
+        font-size: 12px;
+    }
+
+    .Branding__Image--Wrapper {
+        height: 50px;
+        width: 120px;
+    }
+
+    .Footer__Sub--Title {
+        font-size: 15px;
+    }
+
+    .Form input {
+        width: 400px;
+        font-size: 15px;
+    }
+
+    .Form__Button {
+        font-size: 11px;
+        padding: 18px 24px;
+    }
+
+    .Footer__Bottom {
+        flex-direction: column;
+    }
+
+    .Footer__Logo--Copyrights {
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
+    .Footer__Copyright {
+        margin: 4px 0 0;
+        font-size: 14px;
+    }
+
+    .Footer__Payment--Logo {
+        width: 320px;
+    }
+}
+
+
+
+@media ( width <= 768px) {
+    header {
+        padding: 24px 16px;
+    }
+
+    .mobile__nav--link {
+        font-size: 14px;
+    }
+
+    .Navigation__Logo {
+        max-width: 100px;
+    }
+
+    #hero {
+        height: 400px;
+        background-position: 75% center;
+    }
+
+    .Hero__Description {
+        width: 350px;
+    }
+
+    .Hero__Sub--Title,
+    .Spring__Collection__Sub--Title {
+        font-size: 16px;
+    }
+
+    .Hero__Title,
+    .Spring__Collection--Title {
+        font-size: 36px;
+    }
+
+    .Hero__Paragraph,
+    .Spring__Collection--Paragraph {
+        line-height: 24px;
+        margin: 20px 0;
+        max-width: 400px;
+    }
+
+    .Hero__Paragraph a,
+    .Spring__Collection--Paragraph a {
+        font-size: 13.5px;
+    }
+
+    .Color {
+        font-size: 16px;
+    }
+
+    .Hero__Button,
+    .Spring__Collection--Button {
+        padding: 15px 30px;
+        font-size: 10.5px;
+    }
+
+    .Categories__Title,
+    .Testimonials__Title,
+    .Products__Title,
+    .Footer__Title {
+        font-size: 22px;
+    }
+
+    .Collections__Container {
+        padding: 56px 16px 0;
+    }
+
+    .Collection__Container {
+        padding: 12px 20px;
+    }
+
+    .Collection__Title {
+        margin-bottom: 15px;
+        font-size: 22px;
+        max-width: 150px;
+    }
+
+    .Collection__Button {
+        font-size: 11px;
+    }
+
+    .Product {
+        font-size: 14px;
+    }
+
+    .Products__Number,
+    .Collection {
+        font-size: 13px;
+    }
+
+    .Testimonials__Paragraph {
+       max-width: 700px;
+       font-size: 14px;
+    }
+
+    .Testimonials__Name {
+        font-size: 13px
+    }
+
+    .Testimonials__Text {
+        font-size: 12px;
+    }
+    
+    .Products__Sub--Title {
+        font-size: 11px;
+    }
+
+    .Product__Description {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .Product__Price,
+    .Price__Normal {
+        font-size: 13px;
+    }
+
+    .Season__Arrivals--Image {
+        min-height: 250px;
+        object-fit: cover;
+        object-position: 85% center;
+    }
+
+    .Season__Arrivals--Text {
+        padding: 20px 30px;
+    }
+
+    .Season__Arrivals--Title {
+        max-width: 200px;
+        font-size: 26px;
+    }
+
+    .Season__Arrivals--Button {
+        font-size: 10px;
+    }
+
+    .Spring__Collection--Image {
+        min-height: 300px;
+        object-fit: cover;
+        object-position: 10% center;
+    }
+
+    .Spring__Collection--Description {
+        min-width: 350px;
+        padding: 20px 0;
+        background-color: rgb(255 255 255 / 60%);
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .Spring__Collection--Paragraph {
+        margin: 18px 0;
+    }
+
+    .Spring__Collection--Button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .Branding__Container {
+        max-width: 700px;
+    }
+
+    .Branding__Image--Wrapper {
+        width: 110px;
+    }
+
+    .Footer__Sub--Title {
+        font-size: 14px;
+    }
+
+    .Form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #email {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .Form__Button {
+        font-size: 10px;
+    }
+        
+    .Footer__Logo {
+        width: 100px;
+    }
+
+    .Footer__Payment--Logo {
+        width: 300px;
+    }
+
+}
+
+
+
+@media ( 400px <= width <= 480px) {
+    header {
+        padding: 16px 12px;
+    }
+
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .mobile__nav--link {
+        font-size: 13px;
+    }
+    
+    .Navigation__Logo,
+    .Footer__Logo {
+        max-width: 90px;
+    }
+
+    .Navigation__Icons--List {
+        margin: 0;
+    }
+
+    i {
+        margin-left: 3px;
+    }
+
+    #hero {
+        height: 380px;
+    }
+
+    .Hero__Description {
+        width: 320px;
+    }
+
+    .Hero__Sub--Title,
+    .Spring__Collection__Sub--Title {
+        font-size: 15px;
+    }
+
+    .Hero__Title,
+    .Spring__Collection--Title {
+        font-size: 26px;
+        
+    }
+
+    .Hero__Paragraph,
+    .Spring__Collection--Paragraph {
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .Hero__Paragraph a,
+    .Spring__Collection--Paragraph a {
+        font-size: 12px;
+    }
+
+    .Color {
+        font-size: 14px;
+    }
+
+    .Hero__Button,
+    .Spring__Collection--Button {
+        font-size: 9px;
+    }
+
+    #Collections {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .Collection__Container {
+        padding: 25px 35px;
+    }
+
+    .Collection__Title {
+        max-width: 130px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .Collection__Button {
+        font-size: 11px;
+    }
+
+    .Categories__Title,
+    .Testimonials__Title,
+    .Products__Title,
+    .Footer__Title {
+        font-size: 20px;
+    }
+
+    .Item__Figure--Wrapper {
+        max-width: 210px;
+    }
+
+    .Item {
+        width: 90%;
+    }
+
+    #Testimonials {
+        padding: 48px 18px;
+    }
+
+    .Testimonials__Paragraph {
+        font-size: 12px;
+    }
+
+    .Testimonials__Name {
+        font-size: 12px;
+    }
+
+    .Testimonials__Text {
+        font-size: 10px;
+    }
+
+    #Products {
+        padding: 72px 0 48px;
+    }
+
+    .Products__Sub--Title {
+        font-size: 10px;
+    }
+
+    .Products__List--Items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Products__List--Item {
+        width: 90%;
+    }
+
+    .Product__Description {
+        font-size: 13px;
+    }
+
+    #Season__Arrivals {
+       flex-direction: column;
+    }
+
+    .Season__Arrivals--Wrapper {
+        width: 100%;
+    }
+
+    .Season__Arrivals--Title {
+        font-size: 22px;
+        max-width: 150px;
+    }
+
+    .Season__Arrivals--Button {
+        padding: 12px 26px;
+        font-size: 9px;
+    }
+
+    .Spring__Collection--Description {
+        min-width: 320px;
+    }
+
+    #Branding {
+        padding: 48px 0;
+    }
+
+    .Branding__Image--Wrapper {
+        width: 100px;
+    }
+
+    .Footer__Top {
+        padding: 64px 8px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    #email {
+        width: 350px;
+        font-size: 12px;
+    }
+
+    .Form__Button {
+        font-size: 9px;
+    }
+
+    .Footer__Sub--Title,
+    .Footer__Copyright {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .Footer__Payment--Logo {
+        width: 260px;
+    }
+}
+
+
+@media ( 320px <= width < 400px) {
+    header {
+        padding: 16px 12px;
+    }
+
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .mobile__nav--link {
+        font-size: 13px;
+    }
+    
+    .Navigation__Logo,
+    .Footer__Logo {
+        max-width: 90px;
+    }
+
+    .Navigation__Icons--List {
+        margin: 0;
+    }
+
+    i {
+        margin-left: 3px;
+    }
+
+    #hero {
+        height: 380px;
+    }
+
+    .Hero__Description {
+        width: 295px;
+    }
+
+    .Hero__Sub--Title,
+    .Spring__Collection__Sub--Title {
+        font-size: 15px;
+    }
+
+    .Hero__Title,
+    .Spring__Collection--Title {
+        font-size: 26px;
+        
+    }
+
+    .Hero__Paragraph,
+    .Spring__Collection--Paragraph {
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .Hero__Paragraph a,
+    .Spring__Collection--Paragraph a {
+        font-size: 11px;
+    }
+
+    .Color {
+        font-size: 14px;
+    }
+
+    .Hero__Button,
+    .Spring__Collection--Button {
+        font-size: 9px;
+    }
+
+    #Collections {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .Collection__Container {
+        padding: 25px 35px;
+    }
+
+    .Collection__Title {
+        max-width: 130px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .Collection__Button {
+        font-size: 11px;
+    }
+
+    .Categories__Title,
+    .Testimonials__Title,
+    .Products__Title,
+    .Footer__Title {
+        font-size: 20px;
+    }
+
+    .Item__Figure--Wrapper {
+        max-width: 210px;
+    }
+
+    .Item {
+        width: 90%;
+    }
+
+    #Testimonials {
+        padding: 48px 18px;
+    }
+
+    .Testimonials__Paragraph {
+        font-size: 12px;
+    }
+
+    .Testimonials__Name {
+        font-size: 12px;
+    }
+
+    .Testimonials__Text {
+        font-size: 10px;
+    }
+
+    #Products {
+        padding: 72px 0 48px;
+    }
+
+    .Products__Sub--Title {
+        font-size: 10px;
+    }
+
+    .Products__List--Items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Products__List--Item {
+        width: 90%;
+    }
+
+    .Product__Description {
+        font-size: 13px;
+    }
+
+    #Season__Arrivals {
+       flex-direction: column;
+    }
+
+    .Season__Arrivals--Wrapper {
+        width: 100%;
+    }
+
+    .Season__Arrivals--Title {
+        font-size: 22px;
+        max-width: 150px;
+    }
+
+    .Season__Arrivals--Button {
+        padding: 12px 26px;
+        font-size: 9px;
+    }
+
+    .Spring__Collection--Description {
+        min-width: 295px
+    }
+
+    #Branding {
+        padding: 48px 0;
+    }
+
+    .Branding__Image--Wrapper {
+        width: 100px;
+    }
+
+    .Footer__Top {
+        padding: 64px 8px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    #email {
+        width: 300px;
+        font-size: 12px;
+    }
+
+    .Form__Button {
+        font-size: 9px;
+    }
+
+    .Footer__Sub--Title,
+    .Footer__Copyright {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .Footer__Payment--Logo {
+        width: 260px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An e-shop built upon fashion" />
+  <title>Fashion E-shop</title>
+  <link rel="stylesheet" href="style.min.css"/>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <script src="https://kit.fontawesome.com/a0eca86feb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header__container">
+      <input type="checkbox" id="sidebar-active">
+      <label for="sidebar-active" class="open-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+        </svg>
+      </label>
+      <label for="sidebar-active" class="overlay"></label>
+      <div class="mobile__links--container">
+        <label for="sidebar-active" class="close-sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+            <path
+              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
+          </svg>
+        </label>
+        <ul class="mobile__nav--links">
+          <li><a href="" class="mobile__nav--link">HOME</a>
+          <li><a href="" class="mobile__nav--link">SHOP</a>
+          <li><a href="" class="mobile__nav--link">BLOG</a>
+          <li><a href="" class="mobile__nav--link">CONTACT US</a>
+          <li><a href="" class="mobile__nav--link">ABOUT US</a>
+          <li><a href="" class="mobile__nav--link">PAGES</a>
+        </ul>
+      </div>
+      <figure>
+        <img class="Navigation__Logo" src="./Assets/logo.png" alt="" />
+      </figure>
+    </div>
+    <nav>
+      <ul class="Navigation__Links">
+        <li>
+          <a class="Navigation__Link Active" aria-label="Home" href="#">Home</a>
+        </li>
+        <li>
+          <a class="Navigation__Link" aria-label="Shop" href="#Products">Shop</a>
+        </li>
+        <li>
+          <a class="Navigation__Link" aria-label="Blog" href="#">Blog</a>
+        </li>
+        <li>
+          <a class="Navigation__Link" aria-label="Contact" href="#">Contact us</a>
+        </li>
+        <li>
+          <a class="Navigation__Link" aria-label="About" href="#">About Us</a>
+        </li>
+        <li>
+          <a class="Navigation__Link" aria-label="Pages" href="#">Pages</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="Navigation__Icons--List">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-solid fa-bag-shopping"></i>
+      <i class="fa-regular fa-circle-user"></i>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="Hero__Description">
+      <h2 class="Hero__Sub--Title">Get 30% Off & Free Shipping</h2>
+      <h1 class="Hero__Title">Summer Sale</h1>
+      <p class="Hero__Paragraph">
+        <a>An exclusive selection of this season's trends.
+          <span class="Color">Exclusively online</span>
+        </a>
+      </p>
+      <button class="Hero__Button">Shop now +</button>
+    </div>
+  </section>
+
+  <main>
+    <section id="Collections">
+      <div class="Collection">
+        <figure class="Collection__Figure">
+          <img src="./Assets/banner1.webp" alt="" />
+        </figure>
+        <figure class="Collection__Figure--2">
+          <img src="./Assets/glassesshop-man.jpg" alt="" />
+        </figure>
+        <div class="Collection__Container">
+          <h1 class="Collection__Title">Men's Collection</h1>
+          <button class="Collection__Button">Shop Now</button>
+        </div>
+      </div>
+      <div class="Collection">
+        <figure class="Collection__Figure">
+          <img src="./Assets/banner2.webp" alt="" />
+        </figure>
+        <figure class="Collection__Figure--2">
+          <img src="./Assets/fashion-model-in-pink.jpg" alt="" />
+        </figure>
+        <div class="Collection__Container">
+          <h1 class="Collection__Title">Women's Collection</h1>
+          <button class="Collection__Button">Shop Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Categories">
+      <h2 class="Categories__Title">Top Categories</h2>
+      <div class="Category__Items">
+        <div class="Item">
+          <figure class="Item__Picture--Wrapper">
+            <img loading="lazy" class="Item__Picture" src="./Assets/category1.webp" alt="" />
+          </figure>
+          <h3 class="Product__Name">
+            <a href="#" class="Product">T-Shirt</a>
+          </h3>
+          <div class="Product__Collection">
+            <p class="Products__Number">13 Products</p>
+            <a href="#" class="Collection">+ Shop Collection</a>
+          </div>
+        </div>
+        <div class="Item">
+          <figure class="Item__Picture--Wrapper">
+            <img loading="lazy" class="Item__Picture" src="./Assets/category2.webp" alt="" />
+          </figure>
+          <h3 class="Product__Name">
+            <a href="#" class="Product">Blazer</a>
+          </h3>
+          <div class="Product__Collection">
+            <p class="Products__Number">13 Products</p>
+            <a href="#" class="Collection">+ Shop Collection</a>
+          </div>
+        </div>
+        <div class="Item">
+          <figure class="Item__Picture--Wrapper">
+            <img loading="lazy" class="Item__Picture" src="./Assets/category3.webp" alt="" />
+          </figure>
+          <h3 class="Product__Name">
+            <a href="#" class="Product">Jacket</a>
+          </h3>
+          <div class="Product__Collection">
+            <p class="Products__Number">13 Products</p>
+            <a href="#" class="Collection">+ Shop Collection</a>
+          </div>
+        </div>
+        <div class="Item">
+          <figure class="Item__Picture--Wrapper">
+            <img loading="lazy" class="Item__Picture" src="./Assets/category4.webp" alt="" />
+          </figure>
+          <h3 class="Product__Name">
+            <a href="#" class="Product">DRESS</a>
+          </h3>
+          <div class="Product__Collection">
+            <p class="Products__Number">13 Products</p>
+            <a href="#" class="Collection">+ Shop Collection</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Testimonials">
+      <h2 class="Testimonials__Title">Testimonials</h2>
+      <figure class="Testimonials__Picture--Wrapper">
+        <img loading="lazy"  class="Testimonials__Picture" src="./Assets/testimonial1.webp" alt="" />
+      </figure>
+      <p class="Testimonials__Paragraph">
+        These guys have been absolutely outstanding. Perfect Themes and the
+        best of all that you have many options to choose! Best Support team
+        ever! Very fast responding! Thank you very much! I highly recommend
+        this theme and these people!
+      </p>
+      <h3 class="Testimonials__Name">Joanna Sullivan</h3>
+      <h3 class="Testimonials__Text">Customer</h3>
+    </section>
+
+    <section id="Products">
+      <h2 class="Products__Title">Featured Products</h2>
+      <a href="#" class="Products__Sub--Title">Shop all Collection</a>
+      <div class="Products__List--Items">
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product1.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Duis pulvinar obortis eleifend elementum
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$84.00</span>$79.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product5.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Epicuri per lobortis eleifend eget laoreet
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$82.00</span>$77.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product9.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Kaoreet lobortis sagittis laoreet metus is
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$94.00</span>$92.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product13.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Ornare sed consequat nisl eget mi porttitor
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$76.00</span>$73.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product2.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Aliquam lobortis pellentesque nisi lectus
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$94.00</span>$92.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product3.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Eodem modo vels is mattis antes facilisis
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$86.00</span>$82.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product7.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Fusce ultricies dolor vitae tristique suscipit
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$90.00</span>$88.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product11.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Nostrum exercitationem itae posuere nisl
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$98.00</span>$94.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product15.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Pellentesque posuere hendrerit dui quis
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$70.00</span>$66.00
+          </div>
+        </div>
+        <div class="Products__List--Item">
+          <figure class="Product__Image--Wrapper">
+            <img loading="lazy" class="Product__Image" src="./Assets/product4.webp" alt="" />
+            <span class="Label__Sale">Sale</span>
+          </figure>
+          <div class="Product__Description">
+            Donec eu libero ac dapibus urna placerat
+          </div>
+          <div class="Product__Price">
+            <span class="Price__Normal">$87.00</span>$78.00
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Season__Arrivals">
+      <figure class="Season__Arrivals--Wrapper">
+        <img loading="lazy" class="Season__Arrivals--Image" src="./Assets/banner3.webp" alt="" />
+        <div class="Season__Arrivals--Text">
+          <h3 class="Season__Arrivals--Title">S/S-20 Collections</h3>
+          <button class="Season__Arrivals--Button">Shop now</button>
+        </div>
+      </figure>
+      <figure class="Season__Arrivals--Wrapper">
+        <img loading="lazy" class="Season__Arrivals--Image" src="./Assets/banner4.webp" alt="" />
+        <div class="Season__Arrivals--Text">
+          <h3 class="Season__Arrivals--Title">A/W-20 Collections</h3>
+          <button class="Season__Arrivals--Button">Shop now</button>
+        </div>
+      </figure>
+    </section>
+
+    <section id="Spring__Collection">
+      <figure class="Spring__Collection__Image--Wrapper">
+        <img loading="lazy" class="Spring__Collection--Image" src="./Assets/banner5.webp" alt="" />
+      </figure>
+      <div class="Spring__Collection--Description">
+        <h3 class="Spring__Collection__Sub--Title">
+          Minimalist Spring Collection
+        </h3>
+        <h2 class="Spring__Collection--Title">Up to 40% off</h2>
+        <p class="Spring__Collection--Paragraph">
+          <a>An exclusive selection of this season's trends.
+            <span class="Color">Exclusively online</span>
+          </a>
+        </p>
+        <button class="Spring__Collection--Button">Shop Now +</button>
+      </div>
+    </section>
+  </main>
+
+  <section id="Branding">
+    <div class="Branding__Group">
+      <a aria-label="Villatex" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand1.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Creative space for technical innovations brand" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand2.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Christopher Willis" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand3.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Badishe Landes Bibliothek" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand4.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Papillon" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand5.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Francois Redblade" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand6.webp" alt="" />
+        </figure>
+      </a>
+    </div>
+    <div class="Branding__Group">
+      <a aria-label="Villatex" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand1.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Creative space for technical innovations brand" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand2.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Christopher Willis" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand3.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Badishe Landes Bibliothek" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand4.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Papillon" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand5.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Francois Redblade" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand6.webp" alt="" />
+        </figure>
+      </a>
+    </div>
+    <div class="Branding__Group">
+      <a aria-label="Villatex" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand1.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Creative space for technical innovations brand" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand2.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Christopher Willis" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand3.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Badishe Landes Bibliothek" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand4.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Papillon" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand5.webp" alt="" />
+        </figure>
+      </a>
+      <a aria-label="Francois Redblade" href="#">
+        <figure class="Branding__Image--Wrapper">
+          <img loading="lazy" class="Branding__Image" src="./Assets/brand6.webp" alt="" />
+        </figure>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="Footer__Top">
+      <h2 class="Footer__Title">Keep Connected</h2>
+      <p class="Footer__Sub--Title">
+        Get updates by subscribing to our weekly newsletter!
+      </p>
+      <form method="get" class="Form">
+        <input type="email" id="email" autocomplete="off" placeholder="Your email address" />
+        <button class="Form__Button">Subscribe</button>
+      </form>
+    </div>
+    <div class="Footer__Bottom">
+      <div class="Footer__Logo--Copyrights">
+        <figure>
+          <img loading="lazy" class="Footer__Logo" src="./Assets/logo2.png" alt="" />
+        </figure>
+        <p class="Footer__Copyright">
+          Copyright © 2026 Braga. All Rights Reserved.
+        </p>
+      </div>
+      <a aria-label="Page Logo" href="#">
+        <figure class="Footer__Payment--Logo--Wrapper">
+          <img loading="lazy" class="Footer__Payment--Logo" src="./Assets/payment.webp" alt="" />
+        </figure>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
